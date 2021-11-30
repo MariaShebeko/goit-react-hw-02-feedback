@@ -1,29 +1,39 @@
-// import s from './Statistics.module.css'
+import PropTypes from 'prop-types';
+import s from './Statistics.module.css';
+
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => (
-  <div className="Statistics">
-    <ul className="Statistics__list">
-      <li>
-        <span>Good:</span>
+  <div className={s.Statistics}>
+    <ul className={s.list}>
+      <li className={s.item}>
+        <span>Good: </span>
         {good}
       </li>
-      <li>
-        <span>Neutral:</span>
+      <li className={s.item}>
+        <span>Neutral: </span>
         {neutral}
       </li>
-      <li>
-        <span>Bad:</span>
+      <li className={s.item}>
+        <span>Bad: </span>
         {bad}
       </li>
-      <li>
-        <span>Total:</span>
+      <li className={s.item}>
+        <span>Total: </span>
         {total}
       </li>
-      <li>
-        <span>Positive feedback:</span>
+      <li className={s.item}>
+        <span>Positive feedback: </span>
         {positivePercentage}%
       </li>
     </ul>
   </div>
 );
+
+Statistics.prototypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.number.isRequired,
+};
 
 export default Statistics;

@@ -1,0 +1,22 @@
+.FeedbackOptions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.button {
+  background-color: transparent;
+  margin: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  text-decoration: none;
+  text-align: center;
+  border-color: #3498db;
+  border-radius: 5px;
+  color: #fff;
+  box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+  transition: all 150ms ease-in-out;
+}
+
+.button:hover {
+  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+}

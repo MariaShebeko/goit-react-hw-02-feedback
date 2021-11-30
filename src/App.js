@@ -53,7 +53,7 @@ class App extends Component {
         </Section>
         <Section title="Statistics">
           {totalFeedback === 0 ? (
-            <Notification />
+            <Notification message={'No feedback given'} />
           ) : (
             <Statistics
               good={good}

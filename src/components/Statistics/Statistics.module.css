@@ -1,0 +1,12 @@
+.Statistics {
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
+  font-size: 18px;
+}
