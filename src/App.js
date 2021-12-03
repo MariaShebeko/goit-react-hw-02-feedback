@@ -23,21 +23,9 @@ class App extends Component {
   };
 
   feedbackIncrement = event => {
-    if (event.target.innerText === 'good') {
-      return this.setState(prevState => ({
-        good: prevState.good + 1,
-      }));
-    }
-    if (event.target.innerText === 'neutral') {
-      this.setState(prevState => ({
-        neutral: prevState.neutral + 1,
-      }));
-    }
-    if (event.target.innerText === 'bad') {
-      this.setState(prevState => ({
-        bad: prevState.bad + 1,
-      }));
-    }
+    this.setState(prevState => ({
+      [event.target.name]: prevState[event.target.name] + 1,
+    }));
   };
 
   render() {
